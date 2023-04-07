@@ -1,0 +1,44 @@
+---
+import { Image } from "@astrojs/image/components";
+const { img, main, sub, width, height, url } = Astro.props;
+---
+
+<div class="bg-sky-800 p-10 rounded-xl md:rounded-[4rem] grid md:grid-cols-2">
+  <Image src={img} class="rounded-xl" alt="" width={width} height={height} />
+
+  <div class="md:mt-16">
+    <a
+      href={url}
+      target="_blank"
+      class="hover:underline"
+      ><p class="text-4xl mt-2 md:mb-8 font-bold">{main}</p>
+    </a>
+    <p class="font-light mb-4">Built with:</p>
+     {sub.map((item:string) => <span class="rounded-full border-2 border-white p-2 mx-1">{item}</span>)}
+    <hr class="my-6" />
+    <a
+      href={url}
+      target="_blank"
+      class="hover:underline"
+    >
+      <button
+        class="border-2 rounded-xl p-4 transition duration-500 ease-in-out hover:bg-yellow-200 border-white text-white hover:text-black md:text-2xl"
+      >
+        Check it out
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-7 h-7 inline-block"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+        </svg>
+      </button>
+    </a>
+  </div>
+</div>
