@@ -1,8 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import { Image } from "@astrojs/image/components";
 import showFinder from "../assets/show-finder.png";
 import steamSum from "../assets/steam-summary.png";
+import imbAdv from "../assets/imb-adv.png";
 import Projects from "../components/Projects.astro";
 ---
 
@@ -87,6 +87,17 @@ import Projects from "../components/Projects.astro";
           width={2834}
           height={1682}
           url="https://steam-p-finder.netlify.app/"
+        />
+      </div>
+
+      <div class="bg-sky-800 p-10 rounded-r-3xl md:rounded-r-[7rem] md:mr-16">
+        <Projects
+          img={imbAdv}
+          main="My Adventures"
+          sub={["Astro", "Tailwind"]}
+          width={2842}
+          height={1676}
+          url="https://wp-imabari-jet.netlify.app/"
         />
       </div>
     </div>
